@@ -1,0 +1,22 @@
+
+
+[workspace]
+members = ["crates/crabmic-core"]
+
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+crabmic_core = { path = "crates/crabmic-core" }
+
+# audio processing
+cpal = "0.15"
+opus = "0.3"
+tracing = "0.1"
+quinn = "0.11"
+bytes = "1.7.2"
+tokio = "1"
+tokio-util = "0.7"

@@ -1,0 +1,21 @@
+[package]
+name = "crabmic_core"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "crabmic_core"
+path = "src/lib.rs"
+
+[dependencies]
+cpal = { workspace = true }
+opus = { workspace = true }
+tracing = { workspace = true }
+quinn = { workspace = true }
+ring = { version = "0.17" }
+bytes = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tokio-util = { workspace = true }
+[dev-dependencies]
+# testing
+tracing-subscriber = { version = "0.3" }
