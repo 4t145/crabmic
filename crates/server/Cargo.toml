@@ -1,0 +1,26 @@
+cargo-features = ["edition2024"]
+
+[package]
+name = "crabmic_server"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "crabmic_server"
+path = "src/lib.rs"
+
+[dependencies]
+crabmic_model = { version = "0.1.0", path = "../model" }
+tracing = { workspace = true }
+quinn = { workspace = true, features = ["rustls", "ring"] }
+ring = { version = "0.17" }
+bytes = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tokio-util = { workspace = true }
+[dev-dependencies]
+# testing
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+rustls-pemfile = { version = "2" }
+[[example]]
+name = "simple_server"
+path = "examples/simple_server/src/main.rs"

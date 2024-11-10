@@ -1,10 +1,12 @@
+cargo-features = ["edition2024"]
+
 [package]
-name = "crabmic_core"
+name = "crabmic_model"
 version.workspace = true
 edition.workspace = true
 
 [lib]
-name = "crabmic_core"
+name = "crabmic_model"
 path = "src/lib.rs"
 
 [dependencies]
